@@ -31,3 +31,44 @@ body {
     text-wrap: balance;
   }
 }
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Adjust column size*/
+  gap: 20px; /* Add spacing between grid items */
+}
+
+.projectGrid li {
+  border: 1px solid lightgray; /* Give squares a border */
+  padding: 20px; /* Add padding within squares */
+  text-align: center; /* Center the titles */
+}
+
+.appbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(
+    to right,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+
+.app-title {
+  font-size: 2.5rem;
+  align-content: center;
+}
+
+.appbar ul {
+  list-style: none;
+}
+
+.appbar li {
+  display: inline-block;
+  margin-right: 20px;
+}
