@@ -47,28 +47,45 @@ body {
   text-align: center; /* Center the titles */
 }
 
+.circular-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 225px;
+  height: 300px;
+  border-radius: 50%;
+  border: 4px solid black;
+}
+
+.circular-image:hover {
+  border: 4px solid rgb(13, 164, 45);
+}
+
+.aboutMe {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: larger;
+}
+
 .appbar {
+  background-color: solid rgb(13, 164, 45);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: height 0.3s ease;
+  z-index: 10;
+}
+
+.appbar.expanded {
+  height: 100px;
+}
+
+.appbar-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background: linear-gradient(
-    to right,
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
-  );
-}
-
-.app-title {
-  font-size: 2.5rem;
-  align-content: center;
-}
-
-.appbar ul {
-  list-style: none;
-}
-
-.appbar li {
-  display: inline-block;
-  margin-right: 20px;
 }

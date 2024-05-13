@@ -1,11 +1,13 @@
 import React from "react";
 
 interface ProjectCardProps {
+  title: string;
   description: string;
-  githubLink: string;
+  githubLink?: string;
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
+  title,
   description,
   githubLink,
 }) => {
@@ -18,10 +20,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         margin: "10px",
       }}
     >
+      <p>{title}</p>
       <p>{description}</p>
-      <a href={githubLink} target="_blank" rel="noopener noreferrer">
-        View on Github
-      </a>
+      {githubLink && (
+        <a href={githubLink} target="_blank" rel="noopener noreferrer">
+          View on Github
+        </a>
+      )}
     </div>
   );
 };
